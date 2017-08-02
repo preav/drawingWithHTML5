@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Drawing with HTML5</title>
+	<script src="Scripts/jquery-3.2.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="Style/style.css"/>
+	<script type="text/javascript" src="Scripts/default.js"></script>
+</head>
+<body>
+<div id="info1" >
+<h1>Drawing using &lt;canvas&gt;:</h1>
+<p> We can draw in HTML using either &lt;canvas&gt; or &lt;svg&gt; element. I'm going to use the former in this skill test project. </p>
+<h2>Drawing a Rectangle:</h2>
+<p>There are couple of methods available to draw using a canvas. But first, we need to get a reference of the &lt;canvas&gt; element to draw on the canvas. This is done using getContext method which accepts "2d" as parameter. Checkout default.js to see the code behind this box.</p>
+<canvas id="rectCanvas1" width="1150" height="120">
+Canvas rendering issue. Please check if HTML5 is supported.
+</canvas>
+</div>
+<div id="info2">
+<h2>Drawing More Rectangles:</h2>
+<p>We're creating one rectangle boxed inside the other in the below example. Also, we're creating 5 unfilled rectangles using rectStroke method.</p>
+<canvas id="rectCanvas2" width="1150" height="200"></canvas>
+</div>
+<div id="info3">
+<h2>Editing the Drawing</h2>
+<p>We can also change properties of these rectangles such as fill the inside with a color other than black or change the thickness of the line when drawing a rectangle. The first rectangle is filled with a color other than black(default) using fillStyle method. For the next rectangle, we did something fancy and filled it with a "linear" gradient using createLinearGradient and addColorStop methods. The third rectangle was filled using a "radial" gradient using createRadialGradient and addColoStop methods. These CanvasGradient objects accept parameters such as x0, y0, x1, y1 and r0 and r1 for radial gradient. These parameters basically tell where the gradient should start and where it should end. You can play around the values to check how they work. Checkout default.js to see the code behind these rectangles (drawColouredRect() and drawGradientRect()).</p>
+<canvas id="rectCanvas3" width="1150" height="100">
+</canvas>
+<p>The first rectangle experiments with lineWidth property of getContext and the second reactangle tells that we can also use gradient as borders. We've drawn the third triangle using paths. You can find the code behind these rectanges in default.js (gradientBorder() function). </p>
+<canvas id="rectCanvas4" width="1150" height="100"></canvas>
+</div>
+<footer><p>NOTE: Above tutorial has been presented using Microsoft Programming in HTML5 with Javascript and CSS3 ebook.</p></footer>
+</body>
+</html>
